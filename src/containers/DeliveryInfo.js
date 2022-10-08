@@ -21,7 +21,7 @@ const DeliveryInfo = () => {
 					</div>
 				</div>
 
-				<button>
+				<button onClick={(e) => e.preventDefault()}>
 					<Link className="link" to="/buy-info">
 						Next
 					</Link>

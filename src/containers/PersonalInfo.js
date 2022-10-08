@@ -27,7 +27,7 @@ const PersonalInfo = () => {
 					<DropDownInput label="Year" dropdown="" placeholder="2000" type="text" />
 				</div>
 
-				<button>
+				<button onClick={(e) => e.preventDefault()}>
 					<Link className="link" to="/delivery-info">
 						Next
 					</Link>

@@ -13,7 +13,7 @@ const RegistrationForm = () => {
 				<CustomInput type="email" label="E-mail" placeholder="username@gmail.com" />
 				<CustomInput type="password" label="Password" placeholder="password" />
 
-				<button>
+				<button onClick={(e) => e.preventDefault()}>
 					<Link className="link" to="/personal-info">
 						Next
 					</Link>

@@ -44,7 +44,7 @@ const BuyInfo = () => {
 					</div>
 				</div>
 
-				<button>
+				<button onClick={(e) => e.preventDefault()}>
 					<Link className="link" to="/signup">
 						Signup
 					</Link>
