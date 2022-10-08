@@ -11,7 +11,7 @@ const Layout = () => {
 
 	return (
 		<div className="layout">
-			<div className="left">
+			<div className="layout_left">
 				<ul className="navigation">
 					<li>
 						<Link className={`link ${isActive('/register') || isActive('/')}`} to="/register">
@@ -42,7 +42,7 @@ const Layout = () => {
 				<div className="circle_2"></div>
 			</div>
 
-			<div className="right">
+			<div className="layout_right">
 				<ul className="navigation">
 					<li>
 						<Link className={`link ${isActive('/register') || isActive('/')}`} to="/register">

@@ -1,5 +1,5 @@
 import React from 'react'
-import CustomInput from './CustomInput'
+import CustomInput from '../components/CustomInput'
 import { Link } from 'react-router-dom'
 import { FaFacebookF } from 'react-icons/fa'
 import { BsTwitter, BsInstagram } from 'react-icons/bs'
