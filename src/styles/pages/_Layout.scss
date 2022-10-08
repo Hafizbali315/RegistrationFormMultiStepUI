@@ -1,0 +1,305 @@
+.layout {
+	display: flex;
+
+	.left {
+		width: 50%;
+		height: 100vh;
+		background: linear-gradient(to right, #4e4a49, #949293);
+
+		display: flex;
+		align-items: center;
+		padding: 50px;
+
+		position: relative;
+
+		.navigation {
+			list-style: none;
+			gap: 10px;
+			display: none;
+			flex-direction: column;
+
+			li {
+				.link {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: column;
+					gap: 10px;
+
+					.box {
+						width: 12px;
+						height: 12px;
+						background: #6d6d6d;
+						border-radius: 3px;
+					}
+
+					.vr {
+						width: 1px;
+						height: 10px;
+						background: #6d6d6d;
+					}
+				}
+
+				.link.active {
+					.box,
+					.vr {
+						background: #fff;
+					}
+				}
+			}
+		}
+
+		.circle_1,
+		.circle_2 {
+			position: absolute;
+			width: 500px;
+			height: 500px;
+			border-radius: 50%;
+		}
+
+		.circle_1 {
+			left: 120px;
+			background: linear-gradient(to bottom, #3a3132, #827e7f);
+			z-index: 2;
+			opacity: 0.5;
+		}
+
+		.circle_2 {
+			background: linear-gradient(to bottom, #a19fa0, #3a3132);
+			right: -120px;
+			z-index: 1;
+		}
+	}
+
+	.right {
+		width: 50%;
+		height: 100vh;
+		background: #2d2b2c;
+		z-index: 9;
+		padding: 6%;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: 40px;
+
+		.navigation {
+			list-style: none;
+			gap: 10px;
+			display: flex;
+
+			li {
+				.link {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					gap: 10px;
+
+					.box {
+						width: 12px;
+						height: 12px;
+						background: #6d6d6d;
+						border-radius: 3px;
+					}
+
+					.vr {
+						width: 10px;
+						height: 1px;
+						background: #fff;
+					}
+				}
+
+				.link.active {
+					.box,
+					.vr {
+						background: #fff;
+					}
+				}
+			}
+		}
+
+		.container {
+			width: 100%;
+
+			h1 {
+				color: #fff;
+				text-transform: uppercase;
+				margin-bottom: 50px;
+				text-align: center;
+			}
+
+			form {
+				text-align: center;
+
+				button {
+					min-width: 120px;
+					height: 50px;
+					background: transparent;
+					border: 2px solid #fff;
+					border-radius: 10px;
+					color: #fff;
+					padding: 0 30px;
+
+					.link {
+						font-weight: 600;
+						text-decoration: none;
+						color: #fff;
+						font-size: 18px;
+						cursor: pointer;
+						text-transform: uppercase;
+					}
+				}
+
+				.sign_in_seperator {
+					margin: 30px 0;
+
+					display: flex;
+					align-items: center;
+					gap: 30px;
+
+					.line {
+						width: 100%;
+						height: 2px;
+						background: #fff;
+					}
+
+					p {
+						color: #fff;
+						white-space: nowrap;
+						text-overflow: clip;
+					}
+				}
+
+				.social_row {
+					display: flex;
+					align-items: center;
+					gap: 40px;
+					justify-content: center;
+					list-style: none;
+					margin-top: 40px;
+
+					li {
+						.link {
+							.icon {
+								cursor: pointer;
+								color: #fff;
+								font-size: 30px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include desktop-screen {
+	.layout {
+		.left {
+			padding: 50px;
+
+			.circle_1,
+			.circle_2 {
+				width: 450px;
+				height: 450px;
+			}
+
+			.circle_1 {
+				left: 120px;
+			}
+
+			.circle_2 {
+				right: -120px;
+			}
+		}
+
+		.right {
+			height: 100vh;
+			padding: 6%;
+
+			.container {
+				width: 100%;
+
+				h1 {
+					margin-bottom: 50px;
+				}
+
+				form {
+					button {
+						min-width: 120px;
+						height: 50px;
+						padding: 0 30px;
+
+						.link {
+							font-size: 18px;
+						}
+					}
+
+					.sign_in_seperator {
+						margin: 30px 0;
+
+						gap: 30px;
+
+						.line {
+							width: 100%;
+							height: 2px;
+							background: #fff;
+						}
+					}
+
+					.social_row {
+						gap: 40px;
+						margin-top: 40px;
+
+						li {
+							.link {
+								.icon {
+									font-size: 30px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include laptop-screen {
+	.layout {
+		.left {
+			padding: 50px;
+
+			.circle_1,
+			.circle_2 {
+				width: 350px;
+				height: 350px;
+			}
+
+			.circle_1 {
+				left: 120px;
+			}
+
+			.circle_2 {
+				right: -120px;
+			}
+		}
+	}
+}
+
+@include tablet-screen {
+	.layout {
+		.left {
+			display: none;
+		}
+
+		.right {
+			width: 100%;
+
+			.navigation {
+				display: flex;
+			}
+		}
+	}
+}
